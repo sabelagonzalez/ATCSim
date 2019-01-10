@@ -26,13 +26,25 @@
 #define AIRCONTROLLER_H_
 
 #include "Singleton.h"
+#include "Position.h"
+
+namespace atcsim{
 
 class AirController: public Singleton<AirController> {
 public:
 	AirController();
 	virtual ~AirController();
+	Position get_Position(int i, int j){return posiciones_[i][j];};
+	Position get_Aprox(int i){return aproximaciones_[i];};
 
 	void doWork();
+
+private:
+	int prueba;
+	Position posiciones_[4][9];
+	Position aproximaciones_[3];
 };
+
+};  // namespace atcsim
 
 #endif /* AIRCONTROLLER_H_ */

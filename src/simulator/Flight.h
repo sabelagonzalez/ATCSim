@@ -21,14 +21,16 @@
  *  You should have received a copy of the GNU General Public License
  *  along with ATCSim.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include <string>
+
 
 #ifndef FLIGHT_H_
 #define FLIGHT_H_
-
+#include <string>
 #include "Position.h"
 #include "Common.h"
 #include <list>
+
+namespace atcsim{
 
 typedef struct {
 	Position pos;
@@ -49,7 +51,9 @@ public:
 	Position getPosition() { return pos;};
 	float getInclination() { return inclination;};
 	float getBearing() { return bearing;};
+	float getInitBearing() { return init_bearing;};
 	float getSpeed() { return speed;};
+	void setSpeed(float tgt_speed) {speed = checkSpeedLimits(tgt_speed);}
 	float getPoints() {return points;};
 	std::string getId(){return id;};
 	void setFocused(bool state) { focused = state;};
@@ -58,10 +62,14 @@ public:
 	bool getInStorm() {return inStorm;};
 	void setInStorm(bool in) {inStorm=in;};
 
+	float getFirstBearing() { return first_bearing;};//DANI
+	int get_fase(){return fase_;};
+	void set_fase(int fase){fase_=fase;};
+
 private:
 	std::string id;
 	Position pos, last_pos;
-	float bearing, inclination;
+	float init_bearing, bearing, inclination;
 	float speed, w_speed;
 	std::list<Route> route;
 	bool focused;
@@ -69,6 +77,14 @@ private:
 	bool inStorm;
 
 	float points;
+
+	float checkSpeedLimits(float tgt_speed);
+
+	float first_bearing;//DANI
+
+	int fase_;
 };
+
+};  // namespace atcsim
 
 #endif /* FLIGHT_H_ */

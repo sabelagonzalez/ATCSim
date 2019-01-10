@@ -23,11 +23,13 @@
  */
 #include <string>
 
-#ifndef POSITION_STORM_H__
-#define POSITION_STORM_H__
+#ifndef TORMENTA_H__
+#define TORMENTA_H__
 
 #include "Position.h"
 #include "Common.h"
+
+namespace atcsim{
 
 class Storm {
 public:
@@ -51,4 +53,6 @@ private:
 	float speed;
 };
 
-#endif  // POSITION_STORM_H__
+};  // namespace atcsim 
+
+#endif  //  TORMENTA_H__
