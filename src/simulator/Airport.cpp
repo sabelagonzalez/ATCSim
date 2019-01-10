@@ -60,13 +60,9 @@ Airport::Airport() {
 
 	pthread_mutex_init(&mutex, NULL);
 
-	acum_ =  0;
 
   any_landing_ = false;
 
-
-	paso_=1;
-	tiempo_ultimo_=0;
 }
 
 Airport::~Airport() {
