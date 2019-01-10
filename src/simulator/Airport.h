@@ -64,15 +64,9 @@ public:
 	void umbook_landing() {any_landing_ = false;}
   bool is_booked_landing() { return any_landing_;}
 
-	float getAcum(){return acum_;};
-	float getPeriodos(){return periodos_;};
 
 
-	int getPaso(){return paso_;};
-	void setPaso(int paso){paso_=paso;};
 
-	int getTiempoUltimo(){return tiempo_ultimo_;};
-	void setTiempoUltimo(int time){tiempo_ultimo_=time;};
 
 private:
 
@@ -102,13 +96,11 @@ private:
 
     pthread_mutex_t mutex;
 
-	float acum_;
 
   bool any_landing_;
 
-	int periodos_;
-	int paso_;
-	float tiempo_ultimo_;
+	float acum_;
+
 
 
 };

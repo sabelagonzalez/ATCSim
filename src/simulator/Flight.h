@@ -62,9 +62,6 @@ public:
 	bool getInStorm() {return inStorm;};
 	void setInStorm(bool in) {inStorm=in;};
 
-	float getFirstBearing() { return first_bearing;};//DANI
-	int get_fase(){return fase_;};
-	void set_fase(int fase){fase_=fase;};
 
 private:
 	std::string id;
@@ -80,9 +77,7 @@ private:
 
 	float checkSpeedLimits(float tgt_speed);
 
-	float first_bearing;//DANI
 
-	int fase_;
 };
 
 };  // namespace atcsim

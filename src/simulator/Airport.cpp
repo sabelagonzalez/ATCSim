@@ -205,7 +205,6 @@ Airport::step()
 	if(acum_>INC_DIFF)
 	{
 		max_flights += INC_PEN;
-		periodos_++;
 		//std::cerr<<"Increase flights in "<<INC_PEN<<" to "<<max_flights<<std::endl;
 
 	 	acum_ = 0;

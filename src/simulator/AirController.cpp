@@ -270,7 +270,6 @@ AirController::doWork()
           (*it)->getRoute()->push_front(r29);
           (*it)->getRoute()->push_front(r28);
         }else{
-          std::cout<<"AHORA!!!!"<<std::endl;
           (*it)->getRoute()->push_back(r28);
           (*it)->getRoute()->push_front(r27);
           (*it)->getRoute()->push_front(r32);
@@ -286,7 +285,6 @@ AirController::doWork()
 
     if (!(Airport::getInstance()->is_booked_landing())){
       (*it)->getRoute()->clear();
-      std::cout<<"ENTRA EN RUTA DE APROXIM.!!!!"<<std::endl;
 
       Airport::getInstance()->book_landing();
 
@@ -294,7 +292,6 @@ AirController::doWork()
       float x= pos.get_x();
       float y= pos.get_y();
 
-      std::cout<<"!!!"<<std::endl;
 
       Route r36, r37, r38;
 
@@ -311,7 +308,6 @@ AirController::doWork()
 
       if(x>=0.0 && x<=14142.0 && y>=11415.0 && y<=20000.0){
         Route r6, r7, r8;
-        std::cout<<"RUTA 0.!!!!"<<std::endl;
 
         r6.pos = get_Position(0,6);
         r6.speed = 350;
@@ -325,7 +321,6 @@ AirController::doWork()
 
       }else if(x>=0.0 && x<=14142.0 && y<=-11415.0 && y>=-20000.0){
         Route r15, r16, r17;
-        std::cout<<"RUTA 1.!!!!"<<std::endl;
 
         r15.pos = get_Position(1,6);
         r15.speed =350.0;
@@ -338,7 +333,6 @@ AirController::doWork()
         (*it)->getRoute()->push_front(r15);
       }else if((x>=10000.0 && x<=16000.0 && y>=4400.0 && y<=8700.0)||(x>=14142.0 && x<=20000.0 && y<=20000.0 && y>=0.0)){
         Route r24, r25, r26;
-        std::cout<<"RUTA 2.!!!!"<<std::endl;
 
         r24.pos = get_Position(2,6);
         r24.speed = 350.0;
@@ -351,7 +345,6 @@ AirController::doWork()
         (*it)->getRoute()->push_front(r24);
       }else if((x>=10000.0 && x<=16000.0 && y<=-4400.0 && y>=-8700.0)||(x>=14142.0 && x<=20000.0 && y>=-20000.0 && y<=0.0)){
         Route r33, r34, r35;
-        std::cout<<"RUTA 3.!!!!"<<std::endl;
 
         r33.pos = get_Position(3,6);
         r33.speed = 350.0;

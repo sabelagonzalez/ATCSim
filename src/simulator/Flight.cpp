@@ -49,8 +49,6 @@ Flight::Flight(std::string _id, Position _pos, float _bearing, float _inclinatio
 	id = _id;
 	pos = _pos;
 	bearing = _bearing;
-	first_bearing=_bearing;;//DANI
-	std::cout <<"FIRST BEARING: "<<(first_bearing*180/pi)<<'\n';
 	init_bearing = _bearing;
 	inclination = _inclination;
 	//speed = _speed;
@@ -64,7 +62,6 @@ Flight::Flight(std::string _id, Position _pos, float _bearing, float _inclinatio
 
 	w_speed = 0.0f;
 
-	fase_=1;
 }
 
 void
